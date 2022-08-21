@@ -60,6 +60,7 @@
 a {
     color: var(--main-font-color);
     text-decoration: none;
+    user-select: none;
 }
 
 img {
@@ -72,6 +73,19 @@ img {
     margin: 0 auto;
     padding: 0;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 /* global end */
 
 
@@ -82,6 +96,7 @@ header {
     top: 0;
     right: 0;
     left: 0;
+    z-index: 1;
     padding: 38px 0;
     font-size: 16px;
     line-height: 20px;
@@ -124,6 +139,7 @@ header {
 
 .logo a:active {
     opacity: 0.3;
+    outline: none;
     transition: 0.3s;
 }
 
@@ -186,6 +202,7 @@ header {
 
 .nav__item a:active {
     opacity: 0.3;
+    outline: none;
     transition: 0.3s;
 }
 
@@ -210,12 +227,91 @@ header {
 
 .phone a:active {
     opacity: 0.3;
+    outline: none;
     transition: 0.3s;
 }
 /* header end */
 
 
 /* main start */
+/* main-block start */
+.main-block {
+    position: relative;
+    width: 100vw;
+    min-height: 715px;
+    margin-bottom: 65px;
+    padding-top: 152px;
+    padding-bottom: 50px;
+}
+
+.main-block img {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.main-block__information {
+    padding-left: 85px;
+}
+
+.main-block h2 {
+    width: 534px;
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+
+    font-size: 50px;
+    line-height: 62px;
+}
+
+.main-block p {
+    width: 494px;
+    margin: 0;
+    margin-bottom: 21px;
+    padding: 0;
+}
+
+.main-block a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 309px;
+    min-height: 74px;
+    padding: 5px;
+
+    background-color: var(--button-background);
+    border: none;
+    transition: 0.3s;
+}
+
+.main-block a:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.main-block a:focus {
+    opacity: 0.8;
+    box-shadow: 1px 1px 25px 5px var(--block-second-background);
+    background-color: var(--block-second-background);
+    border: none;
+    outline: 1px solid var(--block-second-background);
+    outline-offset: -1px;
+    transition: 0.3s;
+}
+
+.main-block a:active {
+    background-color: var(--button-background);
+    box-shadow: 1px 1px 25px 5px var(--button-background);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+/* main-block end */
 /* main end */
 
 
