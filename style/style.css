@@ -154,13 +154,13 @@ header {
     background-image: url("../image/svg/logo-icon.svg");
 }
 
-.header nav {
+.header .nav {
     margin: 0;
     margin-right: 34px;
     padding: 0;
 }
 
-.header ul {
+.nav__list {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
@@ -169,28 +169,28 @@ header {
     padding: 0;
 }
 
-.nav__item {
+.nav__list li {
     margin: 0;
     margin-right: 26px;
     padding: 0;
 }
 
-.nav__item:last-child {
+.nav__list li:last-child {
     margin-right: 0;
 }
 
-.nav__item a,
+.nav__list a,
 .phone a {
     padding: 3px 5px;
     transition: 0.3s;
 }
 
-.nav__item a:hover {
+.nav__list a:hover {
     opacity: 0.6;
     transition: 0.5s;
 }
 
-.nav__item a:focus {
+.nav__list a:focus {
     opacity: 0.8;
     box-shadow: 1px 1px 25px 5px var(--block-first-background);
     background-color: var(--block-first-background);
@@ -200,7 +200,7 @@ header {
     transition: 0.3s;
 }
 
-.nav__item a:active {
+.nav__list a:active {
     opacity: 0.3;
     outline: none;
     transition: 0.3s;
