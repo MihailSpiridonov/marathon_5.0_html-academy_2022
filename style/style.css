@@ -312,6 +312,47 @@ header {
     transition: 0.3s;
 }
 /* main-block end */
+/* block-about start */
+.about {
+    min-height: 555px;
+    margin-bottom: 21px;
+}
+
+.about h2 {
+    width: min-content;
+    min-width: 140px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 0;
+
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.about__wrapper {
+    display: flex;
+}
+
+.about__wrapper img {
+    margin-right: 62px;
+}
+
+.about__text {
+    width: 528px;
+}
+
+.about__text p {
+    margin: 0;
+    margin-bottom: 65px;
+    padding: 0;
+}
+
+.about__text blockquote {
+    margin: 0;
+    padding: 0;
+}
+/* block-about end */
 /* main end */
 
 
