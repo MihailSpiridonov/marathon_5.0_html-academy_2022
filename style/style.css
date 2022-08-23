@@ -466,8 +466,6 @@ header {
 }
 
 .our-projects__hover {
-    /*z-index: 1;*/
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -490,7 +488,8 @@ header {
     transition: 0.3s;
 }
 
-.our-projects__list li:hover .our-projects__hover {
+.our-projects__list li:hover .our-projects__hover,
+.our-projects__list li:focus .our-projects__hover {
     height: 100%;
     opacity: 1;
     visibility: visible;
@@ -498,7 +497,10 @@ header {
 }
 
 .our-projects__hover h3 {
+    position: absolute;
+
     width: 60%;
+    height: 0;
     margin: 0;
     margin-bottom: 30px;
     padding: 0;
@@ -509,9 +511,27 @@ header {
     text-align: center;
 }
 
-.our-projects__hover p{
+.our-projects__list li:hover h3,
+.our-projects__list li:focus h3 {
+    position: static;
+
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.our-projects__hover p {
+    position: absolute;
+
+    height: 0;
     margin: 0;
     padding: 0;
+}
+
+.our-projects__list li:hover p,
+.our-projects__list li:focus p {
+    position: static;
+
+    height: auto;
 }
 
 .our-projects__more {
