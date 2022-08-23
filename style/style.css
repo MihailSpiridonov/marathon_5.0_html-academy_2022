@@ -589,6 +589,59 @@ header {
     transition: 0.3s;
 }
 /* block-our-projects end */
+
+
+/* block-our-team start */
+.team {
+    min-height: 585px;
+    margin-bottom: 35px;
+    padding: 50px 0;
+
+    background-color: var(--block-first-background);
+}
+
+.team h2 {
+    margin: 0;
+    margin-bottom: 42px;
+    padding: 0;
+
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.team__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.team__list li {
+    max-width: 30%;
+    width: 320px;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.team__list img {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.team__list p {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* block-our-team end */
 /* main end */
 
 
