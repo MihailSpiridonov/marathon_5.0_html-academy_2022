@@ -28,6 +28,7 @@
     --button-background: #cc8b86;
     --block-first-background: #e2c4ba;
     --block-second-background: #8d7370;
+    --block-background-hover: rgba(100, 72, 69, 0.8);
 }
 /* variables end */
 
@@ -182,6 +183,7 @@ header {
 .nav__list a,
 .phone a {
     padding: 3px 5px;
+    transition-property: opacity;
     transition: 0.3s;
 }
 
@@ -288,6 +290,7 @@ header {
 
     background-color: var(--button-background);
     border: none;
+    transition-property: opacity;
     transition: 0.3s;
 }
 
@@ -408,6 +411,164 @@ header {
     text-transform: uppercase;
 }
 /* block-advantages end */
+
+
+/* block-our-projects start */
+.our-projects {
+    min-height: 1100px;
+    margin-bottom: 65px;
+}
+
+.our-projects h2 {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.our-projects__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px 20px;
+
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.our-projects__list li {
+    position: relative;
+    width: 488px;
+    min-height: 451px;
+    margin: 0;
+    padding: 0;
+}
+
+.our-projects__list li.big {
+    width: 692px;
+}
+
+.our-projects__list img {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+}
+
+.our-projects__hover {
+    /*z-index: 1;*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 100%;
+    height: 0;
+    max-height: 100%;
+    padding: 35px;
+    
+    color: var(--second-font-color);
+
+    background-color: var(--block-background-hover);
+    box-sizing: border-box;
+
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition-property: height, opacity, visibility;
+    transition: 0.3s;
+}
+
+.our-projects__list li:hover .our-projects__hover {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+
+.our-projects__hover h3 {
+    width: 60%;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+}
+
+.our-projects__hover p{
+    margin: 0;
+    padding: 0;
+}
+
+.our-projects__more {
+    position: relative;
+    display: block;
+
+    margin: 0 auto;
+    padding: 0;
+
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    color: var(--main-font-color);
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+    transition-property: opacity;
+    transition: 0.5s;
+}
+
+.our-projects__more::after {
+    position: absolute;
+    content: "";
+    right: -70px;
+    top: 13px;
+
+    width: 65px;
+    height: 15px;
+
+    background-image: url("../image/svg/arrow_right--long.svg");
+    background-repeat: no-repeat;
+}
+
+.our-projects__more:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.our-projects__more:focus {
+    opacity: 0.8;
+    box-shadow: 1px 1px 25px 5px var(--block-second-background);
+    background-color: var(--block-second-background);
+    border: none;
+    outline: 1px solid var(--block-second-background);
+    outline-offset: -1px;
+    transition: 0.3s;
+}
+
+.our-projects__more:active {
+    background-color: var(--button-background);
+    box-shadow: 1px 1px 25px 5px var(--button-background);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+/* block-our-projects end */
 /* main end */
 
 
