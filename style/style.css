@@ -24,6 +24,7 @@
     --font-family: "Montserrat", "Arial", sans-serif;
     --main-font-color: #533738;
     --second-font-color: #ffffff;
+    --placeholder-color: #f6ede9;
     --page-background: #e5e5e5;
     --button-background: #cc8b86;
     --block-first-background: #e2c4ba;
@@ -856,6 +857,151 @@ header {
     background-image: url("../image/svg/arrow_right.svg");
 }
 /* block-reviews end */
+
+
+/* two-blocks-form-and-map start */
+.two-section {
+    min-height: 624px;
+    background-color: var(--block-second-background);
+}
+
+.two-section .container {
+    display: flex;
+
+    height: 100%;
+}
+/* block-form start */
+.form {
+    margin: 0;
+    margin-right: 20px;
+    padding: 50px 0;
+    padding-left: 80px;
+
+    color: var(--second-font-color);
+}
+
+.form h3 {
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+.form p {
+    width: 90%;
+    margin: 0;
+    margin-bottom: 44px;
+    padding: 0;
+
+    opacity: 0.6;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin: 0;
+    padding: 0;
+}
+
+.form input {
+    width: 90%;
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 10px 15px;
+
+    border: none;
+    background: none;
+    border-bottom: 1px solid var(--second-font-color);
+}
+
+.form input::placeholder {
+    color: var(--placeholder-color);
+}
+
+.form input:last-child {
+    margin-bottom: 30px;
+}
+
+.form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 310px;
+    min-height: 74px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--main-font-color);
+
+    border: none;
+    background-color: var(--button-background);
+}
+
+.form input,
+.form button {
+    cursor: pointer;
+    transition-property: opacity;
+    transition: 0.5s;
+}
+
+.form input:hover,
+.form button:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.form input:focus,
+.form button:focus {
+    box-shadow: 1px 1px 25px 5px var(--second-font-color);
+    border: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.form input:active,
+.form button:active {
+    opacity: 0.3;
+}
+/* block-form end */
+
+
+/* block-map start */
+.map {
+    position: relative;
+
+    min-width: 590px;
+    min-height: 100%;
+}
+
+.map iframe {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 5;
+    
+    width: 100%;
+}
+
+.map img {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 1;
+    
+    width: 100%;
+}
+/* block-map end */
+/* two-blocks-form-and-map end */
 /* main end */
 
 
