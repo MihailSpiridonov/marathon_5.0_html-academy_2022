@@ -56,6 +56,7 @@
     color: var(--main-font-color);
 
     box-sizing: border-box;
+    background-color: var(--page-background);
 }
 
 a {
@@ -716,6 +717,145 @@ header {
     text-align: center;
 }
 /* block-our-work-algorithm end */
+
+
+/* block-reviews start */
+.reviews {
+    width: 1036px;
+    min-height: 650px;
+    margin-bottom: 65px;
+
+}
+
+.reviews h2 {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.reviews__wrapper {
+    position: relative;
+}
+
+.reviews__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.reviews__list li {
+    width: 80.5%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.reviews__item {
+    display: flex;
+    align-items: center;
+}
+
+.reviews__text  {
+    margin-right: 20px;
+}
+
+.reviews__text blockquote {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.reviews__text p {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.reviews__text p:last-child {
+    margin-bottom: 0;
+}
+
+.reviews__text cite {
+    margin: 0;
+    padding: 0;
+
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.reviews__image img {
+    margin-bottom: 20px;
+}
+
+.reviews__image img:last-child {
+    margin-bottom: 0;
+}
+
+.reviews__button {
+    position: absolute;
+    content: "";
+    top: calc(50% - 72px);
+    left: 0;
+
+    width: 72px;
+    height: 72px;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--button-background);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition-property: opacity;
+    transition: 0.5s;
+}
+
+.reviews__button:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.reviews__button:focus {
+    box-shadow: 1px 1px 25px 5px var(--block-second-background);
+    border: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.reviews__button:active {
+    opacity: 0.3;
+}
+
+.reviews__button--next {
+    left: auto;
+    right: 0;
+}
+
+.reviews__button--back::after,
+.reviews__button--next::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../image/svg/arrow_left.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.reviews__button--next::after {
+    background-image: url("../image/svg/arrow_right.svg");
+}
+/* block-reviews end */
 /* main end */
 
 
