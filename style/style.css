@@ -1006,4 +1006,51 @@ header {
 
 
 /* footer start */
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 104px;
+    padding: 37px 0;
+}
+
+.footer a {
+    margin: 0;
+    margin-right: 42px;
+    padding: 3px 5px;
+    transition-property: opacity;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.footer a:focus {
+    opacity: 0.8;
+    box-shadow: 1px 1px 25px 5px var(--block-first-background);
+    background-color: var(--block-first-background);
+    border: none;
+    outline: 1px solid var(--block-second-background);
+    outline-offset: -1px;
+    transition: 0.3s;
+}
+
+.footer a:active {
+    opacity: 0.3;
+    outline: none;
+    transition: 0.3s;
+}
+
+.footer p {
+    margin: 0;
+    margin-right: 42px;
+    padding: 0;
+}
+
+.footer p:last-child {
+    margin: 0;
+    margin-left: auto;
+}
 /* footer end */
