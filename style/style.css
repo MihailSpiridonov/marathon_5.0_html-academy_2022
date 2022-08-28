@@ -3,18 +3,20 @@
     font-family: "Montserrat";
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
     src: local("Montserrat"),
-         url(../fonts/Montserrat-Regular.woff2) format(woff2),
-         url(../fonts/Montserrat-Regular.woff) format(woff);
+         url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+         url("../fonts/Montserrat-Regular.woff") format("woff");
 }
   
 @font-face {
     font-family: "Montserrat";
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
     src: local("Montserrat"),
-         url(../fonts/Montserrat-Medium.woff2) format(woff2),
-         url(../fonts/Montserrat-Medium.woff) format(woff);
+         url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+         url("../fonts/Montserrat-Medium.woff") format("woff");
 }
 /* fonts end */
 
@@ -121,29 +123,7 @@ header {
     min-height: 20px;
     padding: 2px 5px;
     padding-left: 25px;
-    transition-property: color;
-    transition: 0.5s;
-}
-
-.logo a:hover {
-    opacity: 0.6;
-    transition: 0.5s;
-}
-
-.logo a:focus {
-    opacity: 0.8;
-    box-shadow: 1px 1px 25px 5px var(--block-first-background);
-    background-color: var(--block-first-background);
-    border: none;
-    outline: 1px solid var(--block-second-background);
-    outline-offset: -1px;
-    transition: 0.3s;
-}
-
-.logo a:active {
-    opacity: 0.3;
-    outline: none;
-    transition: 0.3s;
+    cursor: default;
 }
 
 .logo a::after {
@@ -159,7 +139,7 @@ header {
 
 .header .nav {
     margin: 0;
-    margin-right: 34px;
+    margin-right: 32px;
     padding: 0;
 }
 
@@ -174,7 +154,7 @@ header {
 
 .nav__list li {
     margin: 0;
-    margin-right: 26px;
+    margin-right: 25px;
     padding: 0;
 }
 
@@ -184,9 +164,10 @@ header {
 
 .nav__list a,
 .phone a {
-    padding: 3px 5px;
+    padding: 3px 2px;
     transition-property: opacity;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .nav__list a:hover {
@@ -261,7 +242,7 @@ header {
 }
 
 .main-block__information {
-    padding-left: 85px;
+    padding-left: 170px;
 }
 
 .main-block h2 {
@@ -270,6 +251,7 @@ header {
     margin-bottom: 24px;
     padding: 0;
 
+    font-weight: 400;
     font-size: 50px;
     line-height: 62px;
 }
@@ -294,6 +276,7 @@ header {
     border: none;
     transition-property: opacity;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .main-block a:hover {
@@ -322,6 +305,7 @@ header {
 
 /* block-about start */
 .about {
+    width: 1034px;
     min-height: 555px;
     margin-bottom: 21px;
     box-sizing: border-box;
@@ -353,7 +337,7 @@ header {
 
 .about__text p {
     margin: 0;
-    margin-bottom: 65px;
+    margin-bottom: 30px;
     padding: 0;
 }
 
@@ -595,11 +579,15 @@ header {
 
 /* block-our-team start */
 .team {
-    min-height: 585px;
+    min-height: 505px;
     padding-top: 50px;
     padding-bottom: 35px;
 
     background-color: var(--block-first-background);
+}
+
+.team .container {
+    width: 1034px;
 }
 
 .team h2 {
@@ -628,7 +616,6 @@ header {
     max-width: 30%;
     width: 320px;
     margin: 0;
-    margin-bottom: 30px;
     padding: 0;
 }
 
@@ -659,6 +646,7 @@ header {
     margin-bottom: 40px;
     padding: 0;
 
+    font-weight: 400;
     font-size: 40px;
     line-height: 50px;
     text-transform: uppercase;
@@ -1054,3 +1042,121 @@ header {
     margin-left: auto;
 }
 /* footer end */
+
+
+/* sitemap start */
+.page__body--sitemap {
+    grid-template-rows: min-content 1fr min-content;
+}
+
+header.sitemap {
+    position: static;
+    margin-bottom: 60px;
+}
+
+.sitemap .header {
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.sitemap .header .logo a {
+    display: block;
+    min-height: 50px;
+    height: 50px;
+    padding: 10px;
+    padding-left: 80px;
+
+    cursor: pointer;
+    transition-property: color;
+    transition: 0.5s;
+}
+
+.sitemap .header a:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.sitemap .header a:focus {
+    opacity: 0.8;
+    box-shadow: 1px 1px 25px 5px var(--block-first-background);
+    background-color: var(--block-first-background);
+    border: none;
+    outline: 1px solid var(--block-second-background);
+    outline-offset: -1px;
+    transition: 0.3s;
+}
+
+.sitemap .header a:active {
+    opacity: 0.3;
+    outline: none;
+    transition: 0.3s;
+}
+
+.sitemap .logo a::after {
+    top: 15px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.page__body--sitemap h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page__body--sitemap section {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding: 25px 40px;
+    
+    background-color: var(--block-first-background);
+    border: 1px solid var(--block-second-background);
+    border-radius: 10px;
+}
+
+.page__body--sitemap section p,
+.page__body--sitemap section h2 {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 0;
+
+    text-align: center;
+}
+
+.page__body--sitemap section a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+    min-height: 80px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0;
+
+    background-color: var(--button-background);
+    border-radius: 50%;
+    border: 1px solid var(--block-second-background);
+}
+
+.page__body--sitemap section a:hover {
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.page__body--sitemap section a:focus {
+    opacity: 0.8;
+    box-shadow: 1px 1px 25px 5px var(--block-first-background);
+    background-color: var(--block-first-background);
+    outline: 1px solid var(--block-second-background);
+    outline-offset: -1px;
+    transition: 0.3s;
+}
+
+.page__body--sitemap section a:active {
+    opacity: 0.3;
+    outline: none;
+    transition: 0.3s;
+}
+/* sitemap end */
