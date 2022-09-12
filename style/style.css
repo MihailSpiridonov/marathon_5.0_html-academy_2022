@@ -95,9 +95,8 @@ img {
 
 
 /* header start */
-header {
+.page__body header {
     position: absolute;
-    content: "";
     top: 0;
     right: 0;
     left: 0;
@@ -219,7 +218,6 @@ a.phone:active {
 /* main-block start */
 .main-block {
     position: relative;
-    width: 100vw;
     min-height: 715px;
     margin-bottom: 65px;
     padding-top: 152px;
@@ -440,7 +438,6 @@ a.phone:active {
 
 .our-projects__list img {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     z-index: -1;
@@ -788,7 +785,6 @@ a.phone:active {
 
 .reviews__button {
     position: absolute;
-    content: "";
     top: calc(50% - 72px);
     left: 0;
 
@@ -972,7 +968,6 @@ a.phone:active {
 
 .map iframe {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     z-index: 5;
@@ -982,7 +977,6 @@ a.phone:active {
 
 .map img {
     position: absolute;
-    content: "";
     top: 0;
     left: 0;
     z-index: 1;
