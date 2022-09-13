@@ -113,24 +113,20 @@ img {
 
  a.logo {
     position: relative;
+    transform: translateX(-5px);
     min-width: 65px;
     min-height: 20px;
     height: min-content;
     margin-right: 80px;
     padding: 2px 5px;
-    padding-left: 25px;
     cursor: default;
+    box-sizing: border-box;
 }
 
- a.logo::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-
-    width: 25px;
-    height: 25px;
-    background-image: url("../image/svg/logo-icon.svg");
+.logo img {
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 .header .nav {
